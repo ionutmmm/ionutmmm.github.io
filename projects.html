@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to my personal portfolio">
+  <meta name="keyword" content="CV, portfolio, computer science">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" media="screen and (max-width: 768px)" href="./css/mobile.css">
+  <title>Personal Portfolio | Home</title>
+  <style> 
+    *, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .grid {
+    background: rgb(0, 250, 196);
+  }
+
+  .grid_item {
+    background: #ebebeb;  
+    display: block;
+    float: left;
+    position: relative;
+    -moz-transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    -moz-transition: all .2s cubic-bezier(.4,0,.2,1);
+    -webkit-transition: all .2s cubic-bezier(.4,0,.2,1);
+    transition: all .2s cubic-bezier(.4,0,.2,1);
+  }
+
+  .grid_link {
+    display: block;
+    color: black;
+    position: relative;
+    overflow: hidden;
+    border: 4px solid rgb(255, 255, 255);
+  }
+
+  .tile {
+    font-size: 2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /*line-height: 18px; */
+    padding: 0px;
+    /*position: absolute; */
+    text-align: centre;
+    bottom: 50%;
+    left: 0%;    
+    /*-webkit-transform: translate(0%,0%);
+        -ms-transform: translate(0%,0%);
+            transform: translate(0%,0%);
+    */
+    width: 100%;
+    color: white;
+    background-color: black;
+  }
+
+  .a { 
+    background-image: url('img/bigstock-car-traffic-at-rush-hour-in-do-353964830-990x556.jpg');
+    background-size: cover;
+  }
+  .a:hover .middle {
+    opacity: 1;
+  }
+  .a:hover .grid_link{
+    background-image: url('img/bigstock-car-traffic-at-rush-hour-in-do-353964830-990x556.jpg'); 
+    background-size: cover;
+  }
+
+  .b { 
+    background-image: url('img/Imagine-Cambridge-CELTA-Centre.png'); 
+    background-size: cover;
+    justify-content: center;
+  }
+  .b:hover .middle {
+    opacity: 1;
+  }
+  .b:hover .grid_link {
+    background-image: url('img/Imagine-Cambridge-CELTA-Centre.png'); 
+    background-size: cover;
+    justify-content: center;
+  }
+
+  .c { 
+    background-image: url('img/yv2.jpg'); 
+    background-size: cover;
+  }
+  .c:hover .middle {
+    opacity: 1;
+  }
+  .c:hover .grid_link {
+    background-image: url('img/yv2.JPG'); 
+    background-size: cover;
+  }
+
+  .d { 
+    background-image: url('img/drugs.jpg'); 
+    background-size: cover;
+  }
+  .d:hover .middle {
+    opacity: 1;
+  }
+  .d:hover .grid_link{
+    background-image: url('img/drugs.jpg'); 
+    background-size: cover;
+  }
+
+  .e { 
+    background-image: url('img/erasmus+.jpg');
+    background-size: cover; 
+  }
+  .e:hover .middle {
+    opacity: 1;
+  }
+  .e:hover .grid_link {
+    background-image: url('img/erasmus+.jpg');
+    background-size: cover;
+  }
+
+  .f { 
+    background-image: url('img/157291853_265357525033677_5168276819017935915_n.jpg'); 
+    background-size: cover;
+  }
+  .f:hover .middle {
+    opacity: 1;
+  }
+  .f:hover .grid_link {
+    background-image: url('img/157291853_265357525033677_5168276819017935915_n.jpg'); 
+    background-size: cover;
+  }
+
+  .g { 
+    background: purple; 
+  }
+
+  @media all and (max-width: 450px) {
+    .span__1,
+    .span__2,
+    .span__4{
+      width: 100%;
+    }
+
+    .span__1 .grid_link,
+    .span__2 .grid_link,
+    .span__4 .grid_link {
+      padding-bottom: 100%;
+    }
+  }
+
+  @media all and (min-width: 451px) and (max-width: 480px) {
+    .span__1,
+    .span__2,
+    .span__4{
+      width: 49.545252%;
+    }
+
+    .span__1 .grid_link,
+    .span__2 .grid_link,
+    .span__4 .grid_link {
+      padding-bottom: 100%;
+    }
+  }
+
+  @media all and (min-width: 481px) {
+    .span__1 {
+      width: 25%;
+    }
+
+    .span__1 .grid_link {
+      padding-bottom: 100%;
+    }
+
+    .span__2 {
+      width: 50%;
+    }
+
+    .span__2 .grid_link{
+      padding-bottom: 50%;
+    }
+
+    .span__4 {
+      width: 100%;
+    }
+
+    .span__4 .grid_link {
+      padding-bottom: 25%;
+    }
+  }
+
+  .middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <nav id="navbar">
+      <div class="container">
+        <h1 class="logo"><a href="index.html">Magearu Ionut</a></h1>
+        <ul>
+          <li><a href="index.html">Welcome</a></li>
+          <li><a class="current" href="about.html">Projects</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+	
+  <div class="clr"></div>
+  <section id="about-info" class="bg-light py-3">
+    <div class="container">
+        <h1 class="l-heading">My Projects</h1>
+    </div>
+	</section>
+
+	<section id="testimonials" class="py-3">
+		<div class="container">
+      <ul class="grid">
+        <li class="grid_item span__1 a"><a href="https://emerging-europe.com/news/air-pollution-has-a-devastating-cost-for-the-people-of-romanias-capital-bucharest/" class="grid_link"><div class="middle"><div class="tile">Air pollution has a devastating cost for the people of Romania’s capital Bucharest</div></div></a></li>
+        <li class="grid_item span__2 b"><a href="https://www.shakespeare-school.ro/" class="grid_link"><div class="middle"><div class="tile">Shakespear School Essay Competition</div></div></a></li>
+        <li class="grid_item span__1 c"><a href="https://www.youngvolunteer.eu/en" class="grid_link"><div class="middle"><div class="tile">Young Volunteer</div></div></a></li>
+        <li class="grid_item span__2 d"><a href="http://fileserver.idpc.net/library/report%20in%20romania.pdf" class="grid_link"><div class="middle"><div class="tile">Romania-Country Drug Report 2017</div></div></a></li>
+        <li class="grid_item span__1 e"><a href="https://ec.europa.eu/programmes/erasmus-plus/node_en" class="grid_link"><div class="middle"><div class="tile">Erasmus+</div></div></a></li>
+        <li class="grid_item span__1 f"><a href="https://rolandia.eu/en/blog/discover-romania/street-art-in-romania" class="grid_link"><div class="middle"><div class="tile">Street Art in Romania</div></div></a></li>
+      </ul>
+		</div>
+	</section>
+</body>
+</html>
